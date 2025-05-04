@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent Script</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="ink.png" type="image/png">
+</head>
+<body>
+    <div>
+        <button id="mute-toggle" class="mode-toggle">
+            <img id="mute-icon" src="images/mute.svg" alt="sound" width="24" height="24">
+        </button>
+        <button id="dark-mode-toggle" class="mode-toggle">
+            <img id="mode-icon" src="images/dark.svg" alt="light" width="24" height="24">
+        </button>
+    </div>
+    
+    <div id="duration-options">
+        <input type="radio" name="duration" value="30" id="dur30">
+        <label for="dur30">30s</label>
+
+        <input type="radio" name="duration" value="60" id="dur60" checked>
+        <label for="dur60">60s</label>
+
+        <input type="radio" name="duration" value="90" id="dur90">
+        <label for="dur90">90s</label>
+    </div>
+
+    <div id="start-screen">
+        <button id="start" class="fancy-button">
+            <img src="images/play_circle.svg" alt="play" width="24" height="24">
+        </button>
+    </div>
+
+    <div id="countdown" class="countdown hidden"></div>
+
+    <div id="container" class="hidden">
+        <h1>Silent Script</h1>
+        <p id="timer"></p>
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+        <div id="quote" class="quote"></div>
+        <textarea id="input" placeholder="start typing here..." rows="3"></textarea>
+
+        <div id="game-stats">
+            <p id="score">Quotes: 0</p>
+            <p id="accuracy">Accuracy: 100%</p>
+        </div>
+    </div>
+
+    <div id="game-summary" class="summary-container hidden"></div>
+
+    <div id="restart-screen">
+        <button id="restart" class="fancy-button" style="display: none;">
+            <img src="images/refresh.svg" alt="restart" width="24" height="24">
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
